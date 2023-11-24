@@ -16,6 +16,14 @@ let ejemplo2 =  (5 > 3) && (8 == 8) && (10 <= 1) //false
 let ejemplo3 =  (10 <= 1) && (8 == 8) && (5 > 3) //false
 
 //-------JERARQUÍA DE OPERADORES------
+
+/*
+    1.- () 
+    2.- NOT
+    3.- AND
+    4.- OR
+*/
+
 let ejemplo4 = !true && false || true;
 //NOT se evalúa primero -> (false && false) || true
 //AND tiene mayor jerarquía que OR -> false || true
@@ -23,7 +31,7 @@ let ejemplo4 = !true && false || true;
 console.log(ejemplo4); //true
 
 let ejemplo5 = !true && (false || true);
-//Evalúa NOT -> false && (false || true)
 //Verfica los parértesis -> !true && true
+//Evalúa NOT -> false && true
 //Evalúa AND -> false
 console.log(ejemplo5); 
