@@ -40,3 +40,43 @@ function saludar(nombre, primerApellido){
 
 saludar("Gutiérrez", "Pedro")
 
+// Funciones de alto orden: Son funciones que reciben como parámetro otras funciones o las utilizan dentro de su definición
+//función principal
+function operacionMatematica(num1, num2, operacion) {
+    return operacion(num1, num2) //suma(7, 14) -> 21
+}
+
+//función que mande como parámetro
+function suma(num1, num2) {
+    return num1 + num2
+}
+
+function resta(num1, num2) {
+    return num1 - num2
+}
+
+console.log(operacionMatematica(7, 14, suma))
+console.log(operacionMatematica(7, 14, resta))
+
+//----------------------------------------------
+//Funciones flecha (arrow functions)
+//Las funciones flecha nos dan una sintaxis más limpia y fácil de leer
+//Normalmente se almacenan en constantes
+const saludarFecha = (nombre, pApellido) => {
+    console.log("-> Hola, soy " + nombre + " " + pApellido)
+}
+
+saludarFecha("Juana", "Martínez")
+
+//short arrow function
+//1.- Si mi función sólo retorna un valor, puedo quitar el return explicito
+//las llaves y hacer uso del return implícito
+const sumaFlecha = (num1, num2) => num1 + num2
+
+console.log(sumaFlecha(4, 4))
+
+//2.- Si mi función sólo recibe un parámetro, puedo quitar los paréntesis de los parámetros
+const saludarCorto = nombre => {
+    console.log("Hola, soy " + nombre)
+}
+saludarCorto("Ulises")
