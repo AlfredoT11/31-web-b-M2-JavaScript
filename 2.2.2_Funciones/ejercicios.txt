@@ -1,0 +1,3 @@
+    Problema 1: Crear una función que determine si un número es par o impar.
+    Problema 2: Escribir una función que calcule el área de un círculo.
+    Problema 3: Utilizar una función de alto orden para aplicar una operación a dos números.
